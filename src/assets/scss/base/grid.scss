@@ -1,0 +1,95 @@
+@use "sass:math";
+
+.container {
+  width: calc(100% - #{$grid-gap});
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$md-only}{
+    max-width: #{$tablet - 48px};
+  }
+  @media #{$ds-and-up}{
+    width: calc(100% - #{$grid-gap * 3});
+  }
+  @media #{$ds-only}{
+    max-width: #{$desktop - 64px};
+  }
+  @media #{$wd-only}{
+    max-width: #{$wide - 80px};
+  }
+  @media #{$hd-only}{
+    max-width: 1410px;
+  }
+}
+
+.row {
+  @extend %flex;
+  display: flex;
+  margin-left: -#{$grid-gap / 2};
+  margin-right: -#{$grid-gap / 2};
+  margin-top: -#{$grid-gap / 2};
+  &:not(:last-child) {
+    margin-bottom: #{$grid-gap / 2};
+  }
+  @media #{$md-and-up} {
+    margin-left: -#{$grid-gap / 2};
+    margin-right: -#{$grid-gap / 2};
+    margin-top: -#{$grid-gap / 2};
+    &:not(:last-child) {
+      margin-bottom: #{$grid-gap / 2};
+    }
+  }
+  &.gapless {
+    margin: 0!important;
+    .col {
+      padding: 0!important;
+    }
+  }
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: #{$grid-gap / 2};
+  @media #{$md-and-up} {
+    padding: #{$grid-gap / 2};
+  }
+  @for $col from 1 through $grid-columns {
+    &.is-#{$col} {
+      flex: none;
+      width: percentage($col / $grid-columns);
+    }
+    &.is-offset-#{$col} {
+      margin-left: percentage($col / $grid-columns);
+    }
+  }
+  &.is-offset-0 {
+    margin-left: percentage(0);
+  }
+  &.is-narrow {
+    width: unset;
+    flex: none;
+  }
+}
+
+@each $screen, $media in ('sm': $sm-only, 'md': $md-only, 'ds': $ds-and-up, 'wd': $wd-and-up, 'hd': $hd-only) {
+  @media #{$media} {
+    .col {
+      @for $col from 1 through $grid-columns {
+        &.is-#{$screen}-#{$col} {
+          flex: none;
+          width: percentage($col / $grid-columns);
+        }
+        &.is-offset-#{$screen}-#{$col} {
+          margin-left: percentage($col / $grid-columns);
+        }
+      }
+      &.is-offset-#{$screen}-0 {
+        margin-left: percentage(0);
+      }
+      &.is-#{$screen}-narrow {
+        width: unset;
+        flex: none;
+      }
+    }
+  }
+}

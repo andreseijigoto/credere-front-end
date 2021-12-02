@@ -1,0 +1,66 @@
+$button-color: white;
+$button-background-color: #fe0005;
+$button-border-hover-color: #cd0014;
+$button-success-background-color: #29cc08;
+$button-success-border-hover-color: #1c9603;
+
+// screen sizes for responsivity
+$grid-columns: 12;
+$grid-gap: 1.5rem;
+$tablet: 768px;
+$desktop: 1024px;
+$wide: 1280px;
+$hd: 1400px;
+
+// media queries
+$sm-only: 'screen and (max-width: #{$tablet - 1})';
+$md-only: 'screen and (min-width: #{$tablet}) and (max-width: #{$desktop - 1})';
+$ds-only: 'screen and (min-width: #{$desktop}) and (max-width: #{$wide - 1})';
+$wd-only: 'screen and (min-width: #{$wide}) and (max-width: #{$hd - 1})';
+$hd-only: 'screen and (min-width: #{$hd})';
+
+$md-and-down: 'screen and (max-width: #{$tablet - 1})';
+$ds-and-down: 'screen and (max-width: #{$desktop - 1})';
+$wd-and-down: 'screen and (max-width: #{$wide - 1})';
+
+$md-and-up: 'screen and (min-width: #{$tablet})';
+$ds-and-up: 'screen and (min-width: #{$desktop})';
+$wd-and-up: 'screen and (min-width: #{$wide})';
+
+$media-queries: ('sm': $sm-only, 'md': $md-only, 'ds': $ds-and-up, 'wd': $wd-and-up, 'hd': $hd-only);
+
+%base-transition {  
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+%flex {
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.dir-column {
+        flex-direction: column;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.align-right {
+        align-items: flex-end;
+    }
+    &.align-left {
+        align-items: flex-start;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.justify-right {
+        justify-content: flex-end;
+    }
+    &.justify-left {
+        justify-content: flex-start;
+    }
+    &.justify-space {
+        justify-content: space-between;
+    }
+}

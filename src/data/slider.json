@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "layout": "bg-one-third bg-left",
+        "image": "https://images.unsplash.com/photo-1574610758891-5b809b6e6e2e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBtb3VudGFpbnxlbnwwfHwwfHw%3D&w=1000&q=80",
+        "text_title": "Lorem ipsum?",
+        "text_subtitle": "Simply dummy text of the printing and typesetting industry",
+        "description": "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it</p><p>It has survived five centuries.</p>"
+    },
+    {
+        "id": 2,
+        "layout": "bg-full",
+        "image": "https://comshalom.org/wp-content/uploads/2014/08/03/redacao/o-farol.jpg",
+        "text_title": "Why do we use it?",
+        "text_subtitle": "It is a long stablished fact that a reader will be distracted by the readable content of a page when looking at ist layout.",
+        "text_position": "text-bottom",
+        "text_align": "aligh-left"
+    },
+    {
+        "id": 3,
+        "layout": "bg-full",
+        "image": "https://www.oficinadanet.com.br/imagens/post/38422/capa-1o-monitor-gamer-da-corsair-possui-1440p-165hz-e-32.jpg",
+        "text_title": "where does it come from?",
+        "text_subtitle": "Contrary to popular belief, Lorem Ipsum is not random text",
+        "text_position": "text-center",
+        "text_align": "align-right"
+    },
+    {
+        "id": 4,
+        "layout": "bg-half-top",
+        "image": "https://media.npr.org/assets/img/2016/04/29/istock_000068947339_medium_wide-d281af87008ebd62d2862a60d9394f4b37097160.jpg",
+        "text_title": "Lorem ipsum?",
+        "text_subtitle": "Simply dummy text of the printing and typesetting industry",
+        "description": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteraion in some form, by injected humour, or randomised word which don't look even slightly believable.</p><p>The generated Lorem Ipsum is therefore always free from repetition.</p>"
+    }
+]

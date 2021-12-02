@@ -1,0 +1,38 @@
+.section {
+    padding: 3rem 0;
+}
+
+.field-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .field {
+        &:not(:first-child) {
+            margin-left: 1rem;
+        }
+    }
+    & + .field-group {
+        margin-top: 1rem;
+    }
+}
+.fieldset {
+    padding: 1.5rem 1rem 1rem;
+    border: 1px solid #DDD;
+}
+.label {
+    display: block;
+    font-size: .75rem;
+    margin-bottom: .125rem;
+}
+.title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: .75rem;
+    font-weight: bold;
+}
